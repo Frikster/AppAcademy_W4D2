@@ -1,0 +1,53 @@
+<% if method == :edit%>
+  <% default_url = cat_url(cat.id) %>
+  <% default_name = cat.name %>
+  <% default_sex = cat.sex %>
+  <% default_color = cat.color %>
+  <% default_date = cat.birth_date %>
+  <% default_description = cat.description %>
+  <% default_submit = "Edit Cat" %>
+  <%  %>
+<% else %>
+  <% default_url = cats_url %>
+  <% default_name = "" %>
+  <% default_sex = "" %>
+  <% default_color = "" %>
+  <% default_date = "" %>
+  <% default_description = "" %>
+  <% default_submit = "Create Cat" %>
+<% end %>
+
+
+
+<form class="" action="<%= default_url %>" method="post">
+  <% if method == :edit%>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+  
+  <label for="name_input">Name:</label>
+  <input type="text" id='name_input' name="cat[name]" value=" <%= default_name %> ">
+  
+  <legend>Select Gendar (or dont. we don't judge)</legend>
+  <label for="male_input">Male</label>
+  <input type="radio" id='male_input' name="cat[sex]" <%= default_sex == 'M' ? "checked" : ""%>>
+  <label for="female_input">Female</label>
+  <input type="radio" id='female_input' name="cat[sex]" <%= default_sex == 'F' ? "checked" : ""%>>
+  
+  <br>
+  <select name="cat[color]">
+    <option disabled>-- Select Color --</option>
+    <option value="red" <%= default_color == 'red' ? "selected" : ""%> >Red</option>
+    <option value="green" <%= default_color == 'green' ? "selected" : ""%>>Green</option>
+    <option value="blue" <%= default_color == 'blue' ? "selected" : ""%>>Blue</option>
+    <option value="purple" <%= default_color == 'purple' ? "selected" : ""%>>Purple</option>
+  </select>
+  
+  <br>
+  <input type="date" name="cat[birth_date]" value="<%= default_date %>">
+
+  <br>
+  <label for="description_input">Description</label>
+  <textarea id='description_input' name="cat[description]" rows="8" cols="80" ><%= default_description %></textarea>
+  <br>
+  <input type="button" name="submit" value="<%= default_submit %>"> 
+</form>
