@@ -25,13 +25,13 @@
   <% end %>
   
   <label for="name_input">Name:</label>
-  <input type="text" id='name_input' name="cat[name]" value=" <%= default_name %> ">
+  <input type="text" id='name_input' name="cat[name]" value="<%= default_name %> ">
   
   <legend>Select Gendar (or dont. we don't judge)</legend>
   <label for="male_input">Male</label>
-  <input type="radio" id='male_input' name="cat[sex]" <%= default_sex == 'M' ? "checked" : ""%>>
+  <input type="radio" id='male_input' name="cat[sex]" value='M' <%= default_sex == 'M' ? "checked" : ""%>>
   <label for="female_input">Female</label>
-  <input type="radio" id='female_input' name="cat[sex]" <%= default_sex == 'F' ? "checked" : ""%>>
+  <input type="radio" id='female_input' name="cat[sex]" value='F' <%= default_sex == 'F' ? "checked" : ""%>>
   
   <br>
   <select name="cat[color]">
@@ -49,5 +49,5 @@
   <label for="description_input">Description</label>
   <textarea id='description_input' name="cat[description]" rows="8" cols="80" ><%= default_description %></textarea>
   <br>
-  <input type="button" name="submit" value="<%= default_submit %>"> 
+  <input type="submit" name="submit" value="<%= default_submit %>"> 
 </form>

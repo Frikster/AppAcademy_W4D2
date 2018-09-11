@@ -1028,3 +1028,187 @@ Processing by CatsController#new as HTML
 Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:45:59 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (3.5ms)
+  Rendered cats/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 146ms (Views: 92.7ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:49:22 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.3ms)
+  Rendered cats/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cats/5" for 127.0.0.1 at 2018-09-11 15:50:04 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+Completed 404 Not Found in 8ms (ActiveRecord: 1.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Cat with 'id'=5:
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/aea96854f75dac94/variables" for 127.0.0.1 at 2018-09-11 15:50:04 -0700
+Started GET "/cats/2" for 127.0.0.1 at 2018-09-11 15:50:08 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Cat with 'id'=2:
+  app/controllers/cats_controller.rb:9:in `show'
+
+Started POST "/__better_errors/1baef6576f2ac55b/variables" for 127.0.0.1 at 2018-09-11 15:50:09 -0700
+Started GET "/cats/1" for 127.0.0.1 at 2018-09-11 15:50:11 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:51:07 -0700
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.1ms)
+  Rendered cats/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 15:51:23 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"on", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"A Feast for Crows\r\nMargaery Tyrell gives Tommen three black kittens.[2] Dorcas makes Tommen a mouse from scraps of fur and ties it on a fishing pole. The kittens love to chase it and Tommen likes nothing better than jerking it across the floor as the cats pounce on it.[3] Ser Pounce catches a mouse but Lady Whiskers steals it from him. When Tommen tells this to his mother, Cersei Lannister, she replies, \"Ser Pounce must learn to defend his right. In this world the weak are always the victims of the strong.\"[4]\r\n\r\nA Dance with Dragons\r\nWhen King Tommen dines with his mother and Ser Kevan Lannister, he brings his kittens. At the dinner he claims Ser Pounce hissed at the bad cat that was at his window and scared him away. After dinner the king and his kittens are escorted to the royal bedchamber by Ser Boros Blount.[5]"}, "submit"=>"Create Cat"}
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 15:51:52 -0700
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:51:52 -0700
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:51:52 -0700
+Started GET "/cats/new" for 127.0.0.1 at 2018-09-11 15:51:52 -0700
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.0ms)
+  Rendered cats/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 29841ms (Views: 24.3ms | ActiveRecord: 2.1ms)
+
+
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"on", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"A Feast for Crows\r\nMargaery Tyrell gives Tommen three black kittens.[2] Dorcas makes Tommen a mouse from scraps of fur and ties it on a fishing pole. The kittens love to chase it and Tommen likes nothing better than jerking it across the floor as the cats pounce on it.[3] Ser Pounce catches a mouse but Lady Whiskers steals it from him. When Tommen tells this to his mother, Cersei Lannister, she replies, \"Ser Pounce must learn to defend his right. In this world the weak are always the victims of the strong.\"[4]\r\n\r\nA Dance with Dragons\r\nWhen King Tommen dines with his mother and Ser Kevan Lannister, he brings his kittens. At the dinner he claims Ser Pounce hissed at the bad cat that was at his window and scared him away. After dinner the king and his kittens are escorted to the royal bedchamber by Ser Boros Blount.[5]"}, "submit"=>"Create Cat"}
+Processing by CatsController#new as HTML
+Processing by CatsController#new as HTML
+Processing by CatsController#new as HTML
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.2ms)
+  Rendered cats/new.html.erb within layouts/application (2.0ms)
+  Rendering cats/new.html.erb within layouts/application
+  Rendering cats/new.html.erb within layouts/application
+  ↳ app/controllers/cats_controller.rb:21
+  Rendered cats/_form.html.erb (0.1ms)
+  Rendered cats/_form.html.erb (0.2ms)
+  Rendered cats/new.html.erb within layouts/application (6.0ms)
+  Rendered cats/new.html.erb within layouts/application (4.9ms)
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+  Rendered cats/_form.html.erb (0.2ms)
+  Rendered cats/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 74ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1494ms (Views: 46.5ms | ActiveRecord: 2.2ms)
+
+
+Completed 200 OK in 100ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 15:52:19 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"on", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"A Feast for Crows\r\nMargaery Tyrell gives Tommen three black kittens.[2] Dorcas makes Tommen a mouse from scraps of fur and ties it on a fishing pole. The kittens love to chase it and Tommen likes nothing better than jerking it across the floor as the cats pounce on it.[3] Ser Pounce catches a mouse but Lady Whiskers steals it from him. When Tommen tells this to his mother, Cersei Lannister, she replies, \"Ser Pounce must learn to defend his right. In this world the weak are always the victims of the strong.\"[4]\r\n\r\nA Dance with Dragons\r\nWhen King Tommen dines with his mother and Ser Kevan Lannister, he brings his kittens. At the dinner he claims Ser Pounce hissed at the bad cat that was at his window and scared him away. After dinner the king and his kittens are escorted to the royal bedchamber by Ser Boros Blount.[5]"}, "submit"=>"Create Cat"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.5ms)
+  Rendered cats/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 87ms (Views: 28.8ms | ActiveRecord: 26.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCat Create (10.7ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "1999-07-07"], ["color", "blue"], ["name", "nick"], ["sex", "M"], ["description", "a smart cat"], ["created_at", "2018-09-11 22:54:52.875382"], ["updated_at", "2018-09-11 22:54:52.875382"]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 15:55:22 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"on", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"Ser pouncea lot"}, "submit"=>"Create Cat"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (0.9ms)
+  Rendered cats/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 16:01:36 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"on", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"Ser pouncea lot"}, "submit"=>"Create Cat"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cats_controller.rb:21
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.1ms)
+  Rendered cats/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cats" for 127.0.0.1 at 2018-09-11 16:02:36 -0700
+Processing by CatsController#create as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce", "sex"=>"M", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"Following Joffrey's death, his younger brother Tommen is set to succeed him as king. Margaery Tyrell is warned by her grandmother Olenna that she should insinuate herself with Tommen as soon as possible, before his mother Cersei can turn the boy against her. Margaery sneaks into Tommen's chambers at night and (chastely) says she wants to get to know him better, if they are to be married. Ser Pounce jumps on the bed and nuzzles up to Margaery, who calls him a proper fellow. Tommen introduces Margaery to the cat, then uncomfortably tells her how Joffrey once seriously threatened to kill it."}, "submit"=>"Create Cat"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[36mCat Create (2.2ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "0300-07-22"], ["color", "purple"], ["name", " Ser Pounce"], ["sex", "M"], ["description", "Following Joffrey's death, his younger brother Tommen is set to succeed him as king. Margaery Tyrell is warned by her grandmother Olenna that she should insinuate herself with Tommen as soon as possible, before his mother Cersei can turn the boy against her. Margaery sneaks into Tommen's chambers at night and (chastely) says she wants to get to know him better, if they are to be married. Ser Pounce jumps on the bed and nuzzles up to Margaery, who calls him a proper fellow. Tommen introduces Margaery to the cat, then uncomfortably tells her how Joffrey once seriously threatened to kill it."], ["created_at", "2018-09-11 23:02:36.739188"], ["updated_at", "2018-09-11 23:02:36.739188"]]
+  ↳ app/controllers/cats_controller.rb:21
+  [1m[35m (69.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:21
+Redirected to http://localhost:3000/cats
+Completed 302 Found in 78ms (ActiveRecord: 71.9ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2018-09-11 16:02:36 -0700
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 314ms (Views: 312.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/3" for 127.0.0.1 at 2018-09-11 16:02:46 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.8ms)
+
+
