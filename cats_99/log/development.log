@@ -1212,3 +1212,54 @@ Processing by CatsController#show as HTML
 Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/cats/3" for 127.0.0.1 at 2018-09-11 16:04:24 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cats/3/edit" for 127.0.0.1 at 2018-09-11 16:04:30 -0700
+Processing by CatsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:29
+  Rendering cats/edit.html.erb within layouts/application
+  Rendered cats/_form.html.erb (1.3ms)
+  Rendered cats/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/cats/3" for 127.0.0.1 at 2018-09-11 16:04:56 -0700
+
+AbstractController::ActionNotFound - The action 'update' could not be found for CatsController:
+
+Started POST "/__better_errors/fd1747678cc65692/variables" for 127.0.0.1 at 2018-09-11 16:04:56 -0700
+Started PATCH "/cats/3" for 127.0.0.1 at 2018-09-11 16:08:49 -0700
+Processing by CatsController#update as HTML
+  Parameters: {"cat"=>{"name"=>" Ser Pounce ", "sex"=>"M", "color"=>"purple", "birth_date"=>"0300-07-22", "description"=>"According to Tommen, his older brother Joffrey didn't like Ser Pounce. Once, Joffrey threatened that he would skin the cat alive, then mix its innards up in Tommen's food, so he wouldn't know he was eating his own pet.\r\n\r\nFollowing Joffrey's death, his younger brother Tommen is set to succeed him as king. Margaery Tyrell is warned by her grandmother Olenna that she should insinuate herself with Tommen as soon as possible, before his mother Cersei can turn the boy against her. Margaery sneaks into Tommen's chambers at night and (chastely) says she wants to get to know him better, if they are to be married. Ser Pounce jumps on the bed and nuzzles up to Margaery, who calls him a proper fellow. Tommen introduces Margaery to the cat, then uncomfortably tells her how Joffrey once seriously threatened to kill it."}, "submit"=>"Edit Cat", "id"=>"3"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cats_controller.rb:35
+  [1m[36mCat Update (0.6ms)[0m  [1m[33mUPDATE "cats" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "cats"."id" = $4[0m  [["name", " Ser Pounce "], ["description", "According to Tommen, his older brother Joffrey didn't like Ser Pounce. Once, Joffrey threatened that he would skin the cat alive, then mix its innards up in Tommen's food, so he wouldn't know he was eating his own pet.\r\n\r\nFollowing Joffrey's death, his younger brother Tommen is set to succeed him as king. Margaery Tyrell is warned by her grandmother Olenna that she should insinuate herself with Tommen as soon as possible, before his mother Cersei can turn the boy against her. Margaery sneaks into Tommen's chambers at night and (chastely) says she wants to get to know him better, if they are to be married. Ser Pounce jumps on the bed and nuzzles up to Margaery, who calls him a proper fellow. Tommen introduces Margaery to the cat, then uncomfortably tells her how Joffrey once seriously threatened to kill it."], ["updated_at", "2018-09-11 23:08:49.574237"], ["id", 3]]
+  ↳ app/controllers/cats_controller.rb:35
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cats_controller.rb:35
+Redirected to http://localhost:3000/cats/3
+Completed 302 Found in 66ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/cats/3" for 127.0.0.1 at 2018-09-11 16:08:49 -0700
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT  "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:9
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
