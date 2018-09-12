@@ -16,4 +16,13 @@ class Cat < ApplicationRecord
   validates :birth_date, :color, :name, :sex, :description, presence: true
   validates :color, inclusion: ['red', 'green', 'blue', 'purple']
   validates :sex, inclusion: ['M', 'F']
+  
+  has_many :cat_rentals,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :cat_id,
+    class_name: :CatRental
+    
+
+  
 end 
